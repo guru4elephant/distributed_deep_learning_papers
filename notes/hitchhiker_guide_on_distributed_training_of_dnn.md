@@ -8,8 +8,7 @@ Distributed Training on GPU for large dataset is critical in modern deep learnin
   - Nodes in the network compute gradients on their local batch of data after which each node sends their gradients to a master server. The master accumulates these gradients by averaging them to form the new global set of gradients for the weight update step.
   - convergence garantisse
   - Recent trends have gravitated towards scaling Synchronous SGD, more specifically, training networks with large batch sizes has led to promising results
-    - large mini-batch algorithms
-    - modulating the learning rate proportional to the batch size
+    - Central Idea: modulating the learning rate proportional to the batch size
     - Linear learning rate scaling, batch size = 8096
       - [Accurate, large minibatch SGD: training imagenet in 1 hour 2017.](https://arxiv.org/pdf/1706.02677.pdf)
       - [DONT DECAY THE LEARNING RATE, INCREASE THE BATCH SIZE 2017](https://arxiv.org/pdf/1711.00489.pdf)
